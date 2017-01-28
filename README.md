@@ -28,3 +28,8 @@ a += a+b;
 
 * Because StringBuilder  has a attribute char[] value.  StringBuilder able to add String or char  into this StringBuilder will just update the value inside the char[] value. Finally,it has only one String  .
 
+
+> Explain difference in time to sum double, Double, and BigDecimal. Which is faster and why?
+
+* primitive double is the fastest.And the wrapper class Double is faster than BigDecimal. Because double is a primitive. Double is an object, it has attributes and methods which takes memory. A BigDecimal class for performing high-precision arithmetic which can be used in banking or financial domain based application. This class approximately fit into the same category as the “wrapper” classes but has some very useful methods, so BigDecimal is the slowest.
+
