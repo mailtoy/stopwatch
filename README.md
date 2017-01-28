@@ -14,10 +14,11 @@ Add 1 billion BigDecimal using array | 9.991447 sec
 > Why does appending 100,000 chars to a String take more than 2X the time to append 50,000 chars? 
 String is created by += . 
 
-*_Example_
-*String a = “old”;
-*String b = “new”;
-*a += a+b;
+_Example_
+
+String a = “old”;
+String b = “new”;
+a += a+b;
 
 * the memory will have a String “old” ,”new”,and “olden” .
 * In this case : appending 100,000 chars to a String take more than 2X the time to append 50,000 chars. Because it will use memory to keep a new result String and still keep the old String, *so every time a String is created, it takes time and use more memories.*
