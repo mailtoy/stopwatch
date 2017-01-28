@@ -20,7 +20,7 @@ String a = “old”;
 String b = “new”;
 a += a+b;
 
-* the memory will have a String “old” ,”new”,and “olden” .
+* the memory will have a String “old” ,”new”,and “oldnew” .
 * In this case : appending 100,000 chars to a String take more than 2X the time to append 50,000 chars. Because it will use memory to keep a new result String and still keep the old String, *so every time a String is created, it takes time and use more memories.*
 
 
