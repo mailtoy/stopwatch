@@ -7,30 +7,30 @@ package stopwatch;
  *
  */
 public class AppendToStringBuilder implements Runnable {
-	private int count;
+	private int size;
 	private String result;
 
 	/**
 	 * 
 	 * Initialize the AppendToString with a specific count.
 	 * 
-	 * @param count is the length of the final String
+	 * @param size is the length of the final String
 	 * 
 	 */
-	public AppendToStringBuilder(int count) {
+	public AppendToStringBuilder(int size) {
 		this.result = "";
-		this.count = count;
+		this.size = size;
 	}
 
 	/**
-	 * Add char 'a' to the String until final count
+	 * Add char 'a' to the String until final size
 	 */
 	@Override
 	public void run() {
 		final char CHAR = 'a';
 		StringBuilder builder = new StringBuilder();
 		int k = 0;
-		while (k++ < count) {
+		while (k++ < size) {
 			builder = builder.append(CHAR);
 		}
 		result = builder.toString();
@@ -44,7 +44,7 @@ public class AppendToStringBuilder implements Runnable {
 	 */
 	@Override
 	public String toString() {
-		return String.format("Append %,d chars to StringBuilder\nfinal string length = %d", count, result.length());
+		return String.format("Append %,d chars to StringBuilder\nfinal string length = %d", size, result.length());
 	}
 
 }

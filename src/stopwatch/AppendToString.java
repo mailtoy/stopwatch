@@ -7,29 +7,29 @@ package stopwatch;
  *
  */
 public class AppendToString implements Runnable {
-	private int count;
+	private int size;
 	private String result = "";
 
 	/**
 	 * 
 	 * Initialize the AppendToString with a specific count.
 	 * 
-	 * @param count is the length of the final String
+	 * @param size is the length of the final String
 	 * 
 	 */
-	public AppendToString(int count) {
+	public AppendToString(int size) {
 		this.result = "";
-		this.count = count;
+		this.size = size;
 	}
 
 	/**
-	 * Add char 'a' to the String until final count
+	 * Add char 'a' to the String until final size
 	 */
 	@Override
 	public void run() {
 		final char CHAR = 'a';
 		int k = 0;
-		while (k++ < count) {
+		while (k++ < size) {
 			result = result + CHAR;
 		}
 
@@ -42,7 +42,7 @@ public class AppendToString implements Runnable {
 	 */
 	@Override
 	public String toString() {
-		return String.format("Append %,d chars to String\nfinal string length = %d", count, result.length());
+		return String.format("Append %,d chars to String\nfinal string length = %d", size, result.length());
 	}
 
 }
