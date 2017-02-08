@@ -10,6 +10,7 @@ public class SumDouble implements Runnable {
 	private int counter;
 	private static final int ARRAY_SIZE = 500000;
 	private Double sum = new Double(0.0);
+	Double[] values = new Double[ARRAY_SIZE];
 
 	/**
 	 * Initialize SumDouble with the counter.
@@ -26,7 +27,6 @@ public class SumDouble implements Runnable {
 	 */
 	@Override
 	public void run() {
-		Double[] values = new Double[ARRAY_SIZE];
 		for (int i = 0; i < ARRAY_SIZE; i++)
 			values[i] = new Double(i + 1);
 		for (int count = 0, i = 0; count < counter; count++, i++) {

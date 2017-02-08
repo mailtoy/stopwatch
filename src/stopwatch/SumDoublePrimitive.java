@@ -10,6 +10,7 @@ public class SumDoublePrimitive implements Runnable {
 	private double sum;
 	private int counter;
 	private static final int ARRAY_SIZE = 500000;
+	double[] values = new double[ARRAY_SIZE];
 
 	/**
 	 * Initialize SumDoublePrimitive with the counter.
@@ -26,7 +27,6 @@ public class SumDoublePrimitive implements Runnable {
 	 */
 	@Override
 	public void run() {
-		double[] values = new double[ARRAY_SIZE];
 		for (int k = 0; k < ARRAY_SIZE; k++)
 			values[k] = k + 1;
 		sum = 0.0;
