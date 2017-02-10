@@ -67,11 +67,8 @@ public class Stopwatch {
 	 * @return true if the stopwatch is running, false if stopwatch is stopped.
 	 */
 	public boolean isRunning() {
-		if (this.running == true) {
-			return true;
-		} else {
-			return false;
-		}
+		return this.running;
+		
 
 	}
 
